@@ -16,36 +16,28 @@
   <canvas id="scratch" hidden></canvas>
   <script src="./index.js"></script>
 
-  <div class="px-4 py-5 my-5 text-center">
-    <h1 class="display-5 fw-bold text-white text-shadow">Unmessup the Metaverse</h1>
-    <div class="col-lg-7 mx-auto">
-      <p class="lead text-white text-shadow">Nudging people towards interoperable worlds</p>
-      <div class="container px-4 py-5" id="custom-cards">
-          <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-            <div class="col">
-              <div class="card card-cover h-100 overflow-hidden text-white rounded-5 shadow-lg" style="background-image: url('images/avatar-player.png'); background-size: auto 160%; background-position: 0%;">
-                <div class="d-flex mt-5 pt-5 flex-column h-100 text-white text-shadow">
-                  <h2 class="mt-4 display-7 lh-1">Players</h2>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card card-cover h-100 overflow-hidden text-white rounded-5 shadow-lg" style="background-image: url('images/avatar-builder.png'); background-size: auto 147%; background-position: 50%;">
-                <div class="d-flex mt-5 pt-5 flex-column h-100 text-white text-shadow">
-                  <h2 class="mt-4 display-7 lh-1">Builders</h2>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card card-cover h-100 overflow-hidden text-white rounded-5 shadow-lg" style="background-image: url('images/avatar-coder.png'); background-size: auto 158%; background-position: 60%;">
-                <div class="d-flex mt-5 pt-5 flex-column h-100 text-shadow">
-                  <h2 class="mt-4 display-7 lh-1">Coders</h2>
-                </div>
-              </div>
-            </div>
-          </div>
+  <div class="header">
+    <h1 class="text-shadow">Unmessup the Metaverse</h1>
+    <p class="lead text-shadow">Nudging people towards interoperable worlds</p>
+  </div>
+  <div class="category-container">
+    <div class="category-cards" id="custom-cards">
+      <div id="players" class="category-card">
+        <div class="category-card-title">
+          <h2>Players</h2>
         </div>
-    </div>
+      </div>
+      <div id="builders" class="category-card" >
+        <div class="category-card-title">
+          <h2>Builders</h2>
+        </div>
+      </div>
+      <div id="coders" class="category-card">
+        <div class="category-card-title">
+          <h2>Coders</h2>
+        </div>
+      </div>
+    </div>  
   </div>
 </body>
 </html>
