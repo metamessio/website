@@ -1,14 +1,21 @@
-html {
-  background: black;
-  height: 100%;
-  overflow: hidden;
-}
-
 body {
-  background: transparent;
+  background: black;
   margin: 0;
   padding: 0;
   height: 100%;
+  overflow: hidden;
+  color: white;
+}
+
+h1 {
+  font-size: calc(1.425rem + 2.1vw);
+  line-height: 1.2;
+  font-weight: 700!important;
+}
+
+h2 {
+  margin: 0.25rem 0px;
+  text-align: center!important;
 }
 
 #matrix {
@@ -39,7 +46,6 @@ body {
   height: 4rem;
   margin-bottom: 1rem;
   font-size: 2rem;
-  color: #fff;
   border-radius: .75rem;
 }
 
@@ -72,15 +78,92 @@ body {
 
 .text-shadow { text-shadow: 0 0 4px rgba(0, 0, 0, 1); }
 
-.card-cover {
-  background-color: rgba(16, 8, 24, 0.65);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  border: 1px solid #302040;
+.header {
+  height: calc(max(30vh, max-content));
+  padding: 5rem 2rem 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  text-align: center;
 }
 
-.card-cover:hover {
+.category-container {
+  height: 70vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.category-cards {
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  min-width: 768px;
+  max-width: 768px;
+  padding: 6rem 0.75rem;
+  margin: auto;
+}
+
+.category-card {
+  margin: 0.75rem;
+  height: 156px;
+  min-width: 224px;
+  overflow: hidden;
+  color: white;
+  border-radius: 1rem;
+  background-color: rgba(16, 8, 24, 0.65);
+  background-repeat: no-repeat;
+  border: 1px solid #302040;
+  box-shadow: 0 1rem 3rem rgba(0,0,0,0.175)!important;
+}
+
+.category-card:hover {
   background-color: rgba(32, 16, 48, 0.65);
   border: 1px solid #9060b0;
+}
+
+.category-card-title {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: flex-end;
+  color: white;
+  text-shadow: 0 0 4px rgb(0 0 0);
+}
+
+.category-card#players {
+  background-image: url(images/avatar-player.png); 
+  background-size: auto 160%;
+  background-position: -10%;
+}
+
+.category-card#builders {
+  background-image: url(images/avatar-builder.png); 
+  background-size:  auto 147%;
+  background-position: 50%;
+}
+
+.category-card#coders {
+  background-image: url(images/avatar-coder.png); 
+  background-size:  auto 158%;
+  background-position: 60%;
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    background: black;
+    height: 100%;
+  }
+
+  .category-cards {
+    flex-wrap: wrap;
+    align-content: start;
+    padding: 1rem 0.75rem;
+    min-width: 100vw;
+  }
+
+  .category-card {
+    margin: 0.75rem calc(50vw - 112px - 0.75rem);
+  }
 }
